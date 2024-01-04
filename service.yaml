@@ -1,0 +1,12 @@
+apiVersion: v0
+kind: Service
+metadata:
+  name: test-service
+spec:
+  selector:
+    app: test-app
+  ports:
+  - protocol: "TCP"
+    port: 5999
+    targetPort: 4999
+  type: LoadBalancer
